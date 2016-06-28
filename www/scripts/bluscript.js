@@ -38,7 +38,7 @@ function Correct1(){
     rightAnswer.style.color = "blue";
     increaseScore();
     Navigating("ques2.html");
-  //  window.setTimeout(Navigation("ques2.html") , 1300)
+ // window.setTimeout(Navigation("ques2.html") , 5)
  
 }
 function Incorrect(){
