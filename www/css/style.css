@@ -1,3 +1,80 @@
-  <script>
-    ellipse(212, 206, 283, 318);
-    </script> 
+h1 {
+    font-family:"sansita one", cursive;
+}
+
+h4 {
+    font-family:"sansita one", cursive;
+}
+
+#start {
+    text-decoration: none;
+    border-style:solid;
+    border-color:white;
+    border-width:3px;
+    padding:7px;
+    color:white;
+    
+}
+p {
+    text-align:center;
+}
+
+#nugget {
+    var ctx;
+var imgBg;
+var imgDrops;
+var x = 0;
+var y = 0;
+var noOfDrops = 30;
+var fallingDrops = [];
+
+
+    function drawBackground(){  
+        ctx.drawImage(imgBg, 0, 0); //Background
+    }
+
+    function draw() {
+        drawBackground();
+        
+        for (var i=0; i< noOfDrops; i++)
+        {
+        ctx.drawImage (fallingDrops[i].image, fallingDrops[i].x, fallingDrops[i].y); //The rain drop
+
+        fallingDrops[i].y += fallingDrops[i].speed; //Set the falling speed
+        if (fallingDrops[i].y > 45) {  //Repeat the raindrop when it falls out of view
+        fallingDrops[i].y = -25 //Account for the image size
+        fallingDrops[i].x = Math.random() * 60;    //Make it appear randomly along the width    
+        }
+        
+        }
+    }
+
+    function setup() {
+        var canvas = document.getElementById('canvasRegn');
+
+        if (canvas.getContext) {
+                ctx = canvas.getContext('2d');
+            
+                    imgBg = new Image();
+            imgBg.src = "http://lorempixel.com/600/600/sports/";
+        setInterval(draw, 40);
+        for (var i = 0; i < noOfDrops; i++) {
+            var fallingDr = new Object();
+            fallingDr["image"] =  new Image();
+        fallingDr.image.src ="https://beerandapplepie.files.wordpress.com/2009/07/nugget.jpg";
+                
+            fallingDr["x"] = Math.random() * 100;
+            fallingDr["y"] = Math.random() * 5;
+            fallingDr["speed"] = 3 + Math.random() * 5;
+            fallingDrops.push(fallingDr);
+            }
+
+        }
+    }
+
+
+
+
+setup();
+}
+   

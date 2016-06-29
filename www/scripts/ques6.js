@@ -37,7 +37,7 @@ function Correct1(){
     var rightAnswer = document.getElementById("right1");
     rightAnswer.style.color = "blue";
     increaseScore();
-    Navigating("ques2.html");
+    Navigating("win.html");
  // window.setTimeout(Navigation("ques2.html") , 5)
  
 }
@@ -47,3 +47,4 @@ function Incorrect(){
     wrongAnswer.style.color = "red";
     ScoreDown();
 }
+
