@@ -1,9 +1,23 @@
 h1 {
-    font-family:"sansita one", cursive;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 34px;
+  padding: 10px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+    color: black;
+    background-color: transparent;
+    letter-spacing: .05em;
+    text-shadow: 
+      4px 4px 0px #d5d5d5, 
+      7px 7px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+    
 }
 
 h4 {
-    font-family:"sansita one", cursive;
+    font-family: 'Indie Flower', cursive;
 }
 
 #start {
@@ -30,7 +44,7 @@ var fallingDrops = [];
 
 
     function drawBackground(){  
-        ctx.drawImage(imgBg, 0, 0); //Background
+        ctx.drawImage(imgBg, 0, 0); /*Background*/
     }
 
     function draw() {
@@ -38,19 +52,19 @@ var fallingDrops = [];
         
         for (var i=0; i< noOfDrops; i++)
         {
-        ctx.drawImage (fallingDrops[i].image, fallingDrops[i].x, fallingDrops[i].y); //The rain drop
+        ctx.drawImage (fallingDrops[i].image, fallingDrops[i].x, fallingDrops[i].y); /*The rain drop*/
 
         fallingDrops[i].y += fallingDrops[i].speed; //Set the falling speed
-        if (fallingDrops[i].y > 45) {  //Repeat the raindrop when it falls out of view
+        if (fallingDrops[i].y > 45) {  /*Repeat the raindrop when it falls out of view*/
         fallingDrops[i].y = -25 //Account for the image size
-        fallingDrops[i].x = Math.random() * 60;    //Make it appear randomly along the width    
+        fallingDrops[i].x = Math.random() * 60;    /*Make it appear randomly along the width*/    
         }
         
         }
     }
 
     function setup() {
-        var canvas = document.getElementById('canvasRegn');
+       var canvas = document.getElementById('canvasRegn');
 
         if (canvas.getContext) {
                 ctx = canvas.getContext('2d');
@@ -77,4 +91,14 @@ var fallingDrops = [];
 
 setup();
 }
-   
+body{
+background-image: url("chickennugget.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
+
+
+
+
+
