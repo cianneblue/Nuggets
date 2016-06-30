@@ -47,7 +47,10 @@ p {
     text-align:center;
 }
 
-#nugget {
+h1 {
+    text-align:center;
+}
+#nugget{
     var ctx;
 var imgBg;
 var imgDrops;
