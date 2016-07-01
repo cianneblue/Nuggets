@@ -37,7 +37,7 @@ function Correct1(){
     var rightAnswer = document.getElementById("right1");
     rightAnswer.style.color = "blue";
 //    increaseScore();
-    Navigating("win.html");
+    Navigating("winner.html");
  // window.setTimeout(Navigation("ques2.html") , 5)
  
 }
